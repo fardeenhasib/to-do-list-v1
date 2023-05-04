@@ -23,6 +23,10 @@ app.get("/work", function (req, res) {
     res.render("list", { todoDay: "Work-List", todoList: workItems })
 });
 
+app.get("/about", function (req, res) {
+    res.render("about");
+});
+
 app.post("/", function (req, res) {
     console.log(req.body);
     let newItem = req.body.NewItem;
@@ -36,5 +40,7 @@ app.post("/", function (req, res) {
     }
 
 });
+
+
 
 app.listen(3000);
